@@ -3,6 +3,9 @@
 Software screen dimmer for KDE Plasma 6 / Wayland — dims below the hardware
 backlight minimum using a click-through black layer-shell overlay.
 
+Prebuilt AppImage: see [Releases](https://github.com/Wurztha/Screen-Dim/releases).
+Licensed under the MIT License (see `LICENSE`).
+
 ## Why
 
 Built for the Asus ROG Z13 2025: the laptop panel (amdgpu_bl1) bottoms out at
