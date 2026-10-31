@@ -33,12 +33,13 @@ Requires flatpak runtimes: `org.kde.Sdk//6.11` (Qt6 + wayland-scanner) and
 https://github.com/AppImage/appimagetool for the AppImage.
 
 ```sh
-make            # builds wldim, installs to ~/.local/bin/wldim
+make            # builds wldim, installs binary + desktop entry + icon to ~/.local
 make appimage   # builds Screen-Dim-x86_64.AppImage (~29 MB, bundles Qt6)
 make clean
 ```
 
-`mkappdir.sh` assembles the AppDir: bundles Qt6 + icu/harfbuzz/freetype/etc.
+Desktop entry and icon sources live in `share/`; `mkappdir.sh` assembles the
+AppDir: bundles Qt6 + icu/harfbuzz/freetype/etc.
 (excluding glibc/GL/X/glib), and the Qt plugins `platforms/{wayland,xcb}`,
 `imageformats/svg`, `iconengines/svgicon`, plus the critical
 `wayland-shell-integration/`, `wayland-graphics-integration-client/` and

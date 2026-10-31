@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
-cd /var/home/wurztha/Desktop/OpenCode/Default/wldim
+cd "$(dirname "$0")"
 rm -rf AppDir
 mkdir -p AppDir/usr/bin AppDir/usr/lib AppDir/usr/plugins AppDir/usr/share/applications
 
 cp wldim AppDir/usr/bin/
-cp ~/.local/share/icons/hicolor/scalable/apps/com.wurztha.screendim.svg AppDir/com.wurztha.screendim.svg
-sed 's|^Exec=.*|Exec=wldim|' ~/.local/share/applications/com.wurztha.screendim.desktop > AppDir/com.wurztha.screendim.desktop
+cp share/com.wurztha.screendim.svg AppDir/com.wurztha.screendim.svg
+cp share/com.wurztha.screendim.desktop AppDir/com.wurztha.screendim.desktop
 cp AppDir/com.wurztha.screendim.desktop AppDir/usr/share/applications/
 
 # bundle runtime libraries (skip glibc / kernel / driver-provided ones)
