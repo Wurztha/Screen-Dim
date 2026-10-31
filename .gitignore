@@ -1,0 +1,6 @@
+wldim
+AppDir/
+*.AppImage
+*.o
+*-header.h
+*-code.c
